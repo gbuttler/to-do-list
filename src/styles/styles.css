@@ -44,7 +44,7 @@ header {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  width: 15%;
+  width: 15vw;
 }
 
 .sidebar button {
@@ -58,8 +58,19 @@ header {
 
 .content {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: repeat(auto-fit, minmax(0, 250px));
+  grid-auto-flow: row;
+  justify-content: center;
+  gap: 5px;
   margin-left: 110%;
+  margin-top: 10px;
+  width: 80vw;
+}
+
+.singleTask {
+  padding: 5px;
+  min-height: 259px;
+  border: 1px solid black;
 }
 
 footer {

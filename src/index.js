@@ -1,2 +1,4 @@
 import "./styles/styles.css";
-import { task } from "./task";
+import { loadTasks } from "./task";
+
+loadTasks();
