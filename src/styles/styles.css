@@ -1,24 +1,28 @@
 * {
   color: purple;
+  background-color: white;
 }
 
 html {
   margin: 0px;
   height: 100%;
   width: 100%;
+  overflow: auto;
 }
 
 body {
   margin: 0px;
-  min-height: 100%;
+  min-height: 100dvh;
   width: 100%;
   display: grid;
   grid-template-rows: 10vh 80vh 10vh;
   background-color: white;
+  overflow: auto;
 }
 
 header {
   position: sticky;
+
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -30,16 +34,37 @@ header {
 .header-buttons {
 }
 
+.new-task-btn {
+}
+
+.new-project-btn {
+}
+
+.task-form {
+  position: fixed;
+  left: 0%;
+  top: 10%;
+  z-index: -1;
+  background-color: lightblue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.task-form div {
+}
+
 .center-page {
   display: grid;
   grid-template-columns: 15% 85%;
+  top: 10vh;
+  /* bottom: 30%; */
 }
 
 .sidebar {
   height: 90vh;
   position: fixed;
   top: 10vh;
-
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -65,6 +90,9 @@ header {
   margin-left: 110%;
   margin-top: 10px;
   width: 80vw;
+
+  height: 100%;
+  padding-bottom: 70px;
 }
 
 .singleTask {
@@ -75,10 +103,12 @@ header {
 
 footer {
   position: fixed;
-  left: 0;
   bottom: 0;
+  left: 0;
+  /* right: 0; */
   width: 100%;
   background-color: white;
+  margin-right: var(--scrollbar-width, 0px);
 }
 
 .footer-content {

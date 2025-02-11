@@ -32,6 +32,12 @@ const loadTasks = () => {
   //dummy tasks
   addNewTask("hang up laundry", "Daily", "today", "", false);
 
+  addNewTask("hang up laundry", "Daily", "today", "", false);
+  addNewTask("hang up laundry", "Daily", "today", "", false);
+  addNewTask("hang up laundry", "Daily", "today", "", false);
+  addNewTask("hang up laundry", "Daily", "today", "", false);
+  addNewTask("hang up laundry", "Daily", "today", "", false);
+
   addNewTask(
     "clean the bathroom",
     "Weekly",
