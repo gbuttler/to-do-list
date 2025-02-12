@@ -17,11 +17,11 @@
       <form id="new-task-form" class="task-form" action method="GET">
         <div class="task-form-options">
           <div class="form-indv-options">
-            <label for="name">Task name</label>
+            <label for="taskName">Task name</label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="taskName"
+              name="taskName"
               placeholder="Task name here..."
               required
             />
@@ -50,15 +50,13 @@
               placeholder="Notes here..."
             />
           </div>
-          <div class="form-indv-options">
-            <label for="completed">Completed</label>
-            <input type="checkbox" id="completed" name="completed" required />
-          </div>
         </div>
-        <div class="form-cancel-button">
-          <input id="cancel-button" type="submit" />
+        <div class="form-submit-button">
+          <input id="sumbit-button" type="submit" />
         </div>
-        <button class="form-cancel-button">Cancel</button>
+        <div class="form-submit-button">
+          <button>Cancel</button>
+        </div>
       </form>
     </div>
     <div class="center-page">
