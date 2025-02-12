@@ -7,7 +7,6 @@ html {
   margin: 0px;
   height: 100%;
   width: 100%;
-  overflow: auto;
 }
 
 body {
@@ -40,18 +39,21 @@ header {
 .new-project-btn {
 }
 
-.task-form {
+.task-form-div {
   position: fixed;
   left: 0%;
   top: 10%;
   z-index: -1;
-  background-color: lightblue;
+  background-color: transparent;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.task-form div {
+.task-form {
+  width: fit-content;
+  padding: 10%;
+  border: 1px black solid;
 }
 
 .center-page {
