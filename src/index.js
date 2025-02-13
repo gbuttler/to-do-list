@@ -14,6 +14,5 @@ newTaskBtn.addEventListener("click", function () {
 });
 
 newProjectBtn.addEventListener("click", function () {
-  console.log("hello i am a new project hopefully");
   newProject();
 });

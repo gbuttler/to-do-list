@@ -72,4 +72,6 @@ const loadTasks = () => {
   displayTasks();
 };
 
+//function to filter array based on projects
+
 export { loadTasks, myTasks, Task, addNewTask, displayTasks };
