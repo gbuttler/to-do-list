@@ -1,8 +1,9 @@
 import { myTasks, Task, addNewTask, displayTasks } from "./task";
 
-const taskForm = () => {
+let taskForm = document.querySelector(".task-form-div");
+
+const taskFormFunc = () => {
   console.log("form is running");
-  let taskForm = document.querySelector(".task-form-div");
 
   taskForm.style.zIndex = "5";
 
@@ -41,4 +42,13 @@ const taskForm = () => {
     });
 };
 
-export { taskForm };
+const cancelTaskForm = () => {
+  taskName.value = " ";
+  project.value = "";
+  due.value = "";
+  notes.value = "";
+
+  taskForm.style.zIndex = "-5";
+};
+
+export { taskFormFunc, cancelTaskForm };

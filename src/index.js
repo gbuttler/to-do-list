@@ -1,6 +1,6 @@
 import "./styles/styles.css";
 import { loadTasks } from "./task";
-import { taskForm } from "./new-task-form";
+import { taskFormFunc, cancelTaskForm } from "./new-task-form";
 import { newProject } from "./sidebar";
 
 loadTasks();
@@ -8,11 +8,17 @@ loadTasks();
 //access new task and project buttons
 const newTaskBtn = document.querySelector(".new-task-btn");
 const newProjectBtn = document.querySelector(".new-project-btn");
+const cancelTaskButton = document.querySelector(".form-cancel-button");
 
 newTaskBtn.addEventListener("click", function () {
-  taskForm();
+  taskFormFunc();
 });
 
 newProjectBtn.addEventListener("click", function () {
   newProject();
+});
+
+cancelTaskButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  cancelTaskForm();
 });
