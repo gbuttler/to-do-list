@@ -1,5 +1,5 @@
 import "./styles/styles.css";
-import { loadTasks } from "./task";
+import { loadTasks, deleteTask, completeTask, myTasks } from "./task";
 import { taskFormFunc, cancelTaskForm } from "./new-task-form";
 import { newProject } from "./sidebar";
 
@@ -9,6 +9,8 @@ loadTasks();
 const newTaskBtn = document.querySelector(".new-task-btn");
 const newProjectBtn = document.querySelector(".new-project-btn");
 const cancelTaskButton = document.querySelector(".form-cancel-button");
+const deleteTaskButton = document.querySelector(".delete-task");
+const completeTaskButton = document.querySelector(".completed-status");
 
 newTaskBtn.addEventListener("click", function () {
   taskFormFunc();
@@ -22,3 +24,12 @@ cancelTaskButton.addEventListener("click", function (event) {
   event.preventDefault();
   cancelTaskForm();
 });
+
+// deleteTaskButton.addEventListener("click", function () {
+//   deleteTask();
+// });
+
+// completeTaskButton.addEventListener("click", function () {
+//   console.log("task completed");
+//   completeTask();
+// });
