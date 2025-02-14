@@ -46,8 +46,6 @@ function displayTasks() {
   let i = 0;
   taskScreen.innerHTML = "";
 
-  //name, project, due, notes, completed
-
   myTasks.forEach((Task) => {
     while (i < myTasks.length) {
       // single task div
