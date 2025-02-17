@@ -1,3 +1,5 @@
+import { Project } from "./projects";
+
 //array to hold the tasks
 const myTasks = [];
 
@@ -30,11 +32,11 @@ let currentDate = `${year}-${month}-${day}`;
 console.log(currentDate);
 
 //dummy tasks
-addNewTask("hang up laundry", "Daily", currentDate, "");
+addNewTask("hang up laundry", "Personal", currentDate, "");
 
 addNewTask(
   "clean the bathroom",
-  "Weekly",
+  "Personal",
   currentDate,
   "don't forget to change the towels"
 );
@@ -97,20 +99,6 @@ function displayTasks() {
     taskCompleteButton.appendChild(taskCompleteIcon);
     bottomTaskLine.appendChild(taskCompleteButton);
 
-    // //delete task
-    // console.log(j);
-    // let taskDeleteButton = document.createElement("button");
-    // taskDeleteButton.className = "delete-task";
-    // taskDeleteButton.addEventListener("click", () => {
-    //   console.log("task deleted", j);
-    //   myTasks.splice(j, 1);
-    //   displayTasks();
-    // });
-    // let taskDeleteIcon = document.createElement("i");
-    // taskDeleteIcon.className = "fa-solid fa-trash";
-    // taskDeleteButton.appendChild(taskDeleteIcon);
-    // bottomTaskLine.appendChild(taskDeleteButton);
-
     console.log(`Task name is:${Task.taskName}`);
     i++;
 
@@ -129,4 +117,13 @@ function completeTask() {}
 
 //function to filter array based on projects
 
-export { loadTasks, myTasks, Task, addNewTask, displayTasks, completeTask };
+export {
+  loadTasks,
+  myTasks,
+  Task,
+  addNewTask,
+  displayTasks,
+  completeTask,
+  currentDate,
+  taskScreen,
+};

@@ -16,6 +16,7 @@ function addNewProject(pName) {
 addNewProject("Personal");
 addNewProject("Work");
 
+//function to load projects
 const loadProjects = () => {
   console.log("projects are loading");
   console.log(myProjects);
@@ -23,10 +24,10 @@ const loadProjects = () => {
   myProjects.forEach((Project, j) => {
     //add the new project to the html
     let projectList = document.querySelector(".project-list");
-    const para = document.createElement("p");
-    para.classList.add("indv-project");
-    para.innerHTML = Project.pName;
-    projectList.appendChild(para);
+    const btn = document.createElement("button");
+    btn.classList.add("indv-project");
+    btn.innerHTML = Project.pName;
+    projectList.appendChild(btn);
 
     //add project options to the form
     let formOption = document.getElementById("project");
@@ -36,4 +37,11 @@ const loadProjects = () => {
   });
 };
 
-export { myProjects, loadProjects };
+//function to allow you to filter by project
+const filterByProjects = () => {};
+//get project name
+//compare inner HTML to Task.project
+//create a new array with those filtered tasks
+//display the new array of tasks
+
+export { myProjects, loadProjects, Project, filterByProjects };
