@@ -1,5 +1,4 @@
-//array to hold projects
-const myProjects = ["Personal", "Work", "Hobbies"];
+import { myProjects } from "./projects";
 
 //new project button
 const newProject = () => {

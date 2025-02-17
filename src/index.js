@@ -2,8 +2,10 @@ import "./styles/styles.css";
 import { loadTasks } from "./task";
 import { taskFormFunc, cancelTaskForm } from "./new-task-form";
 import { newProject } from "./sidebar";
+import { loadProjects } from "./projects";
 
 loadTasks();
+loadProjects();
 
 //access new task and project buttons
 const newTaskBtn = document.querySelector(".new-task-btn");
