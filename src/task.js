@@ -1,5 +1,3 @@
-import { Project } from "./projects";
-
 //array to hold the tasks
 const myTasks = [];
 
@@ -29,7 +27,6 @@ let month = date.getMonth() + 1;
 let year = date.getFullYear();
 
 let currentDate = `${year}-${month}-${day}`;
-console.log(currentDate);
 
 //dummy tasks
 addNewTask("Hang up the laundry", "Personal", currentDate, "");
@@ -51,7 +48,6 @@ function displayTasks() {
   taskScreen.innerHTML = "";
 
   myTasks.forEach((Task, j) => {
-    console.log(i, myTasks.length);
     // single task div
     let singleTask = document.createElement("div");
     singleTask.className = "singleTask";
@@ -74,8 +70,6 @@ function displayTasks() {
     dueNamePara.className = "task-due";
     dueNamePara.textContent = Task.due;
     singleTask.appendChild(dueNamePara);
-
-    console.log(Task.due);
 
     //notes div
     let notesNamePara = document.createElement("p");
@@ -108,16 +102,12 @@ function displayTasks() {
   });
 }
 
-console.log(myTasks);
-
 const loadTasks = () => {
   displayTasks();
 };
 
 //function to complete task
 function completeTask() {}
-
-//function to filter array based on projects
 
 export {
   loadTasks,

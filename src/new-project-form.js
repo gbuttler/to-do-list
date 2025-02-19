@@ -1,6 +1,3 @@
-import { loadProjects, myProjects, Project, addNewProject } from "./projects";
-import { newProject } from "./sidebar";
-
 let projectForm = document.querySelector(".project-form-div");
 
 const projectFormFunc = () => {

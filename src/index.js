@@ -2,13 +2,7 @@ import "./styles/styles.css";
 import { loadTasks, Task, addNewTask, myTasks, displayTasks } from "./task";
 import { taskFormFunc, cancelTaskForm, taskForm } from "./new-task-form";
 import { filterDueToday } from "./sidebar";
-import {
-  loadProjects,
-  filterByProjects,
-  myProjects,
-  Project,
-  addNewProject,
-} from "./projects";
+import { loadProjects, myProjects, Project, addNewProject } from "./projects";
 import {
   projectFormFunc,
   cancelProjectForm,
@@ -61,8 +55,6 @@ document
     event.preventDefault();
     console.log("task submitted");
 
-    //form values
-
     Task.taskName = event.target.taskName.value;
     Task.project = event.target.project.value;
     Task.due = event.target.due.value;
@@ -88,7 +80,7 @@ document
     displayTasks();
   });
 
-//sumbission from project form
+//submission from project form
 document
   .getElementById("new-project-form")
   .addEventListener("submit", function (event) {

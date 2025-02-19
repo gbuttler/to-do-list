@@ -1,9 +1,7 @@
-import { myTasks, Task, addNewTask, displayTasks } from "./task";
-
 let taskForm = document.querySelector(".task-form-div");
 
 const taskFormFunc = () => {
-  console.log("form is running");
+  console.log("task form is running");
 
   taskForm.style.zIndex = "5";
 };

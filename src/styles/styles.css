@@ -31,7 +31,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid black; */
   background-color: var(--green);
   box-shadow: 1px 1px 5px var(--dark-purple);
   z-index: 2;
@@ -69,12 +68,6 @@ header h1 {
   background-color: #719064;
 }
 
-.new-task-btn {
-}
-
-.new-project-btn {
-}
-
 .task-form-div {
   position: fixed;
   left: 0%;
@@ -93,7 +86,6 @@ form {
   padding: 5%;
   background-color: var(--pink);
   border: 1px solid #bd7575;
-
   border-radius: 5px;
 }
 
@@ -209,7 +201,6 @@ select:hover {
   grid-template-columns: 15% 85%;
   top: 10vh;
   background-color: white;
-  /* bottom: 30%; */
 }
 
 .sidebar {
@@ -219,7 +210,6 @@ select:hover {
   overflow: auto;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid black; */
   width: fit-content;
   background-color: var(--blue);
   padding-left: 15px;
@@ -250,9 +240,6 @@ h3 {
   flex-direction: column;
   align-items: center;
   background-color: transparent;
-}
-
-.sidebar button {
 }
 
 .content {
@@ -317,7 +304,6 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  /* right: 0; */
   width: 100%;
   margin-right: var(--scrollbar-width, 0px);
   box-shadow: 0.5px -0.5px 5px var(--dark-purple);
@@ -327,7 +313,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid black; */
   background-color: var(--green);
   padding-left: 15px;
   padding-right: 15px;

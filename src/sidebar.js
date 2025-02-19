@@ -1,49 +1,7 @@
-import { myProjects, Project, filterByProjects } from "./projects";
 import { myTasks, Task, currentDate, taskScreen } from "./task";
-
-//new project button
-// const newProject = () => {
-//   console.log("creating a new project");
-
-//   //using prompt to create a new project
-//   let newProjectItem = prompt("Please enter your project name", "New Project");
-
-//   //add projects to project array
-//   function addNewProject() {
-//     myProjects.push(newProjectItem);
-//   }
-
-//   console.log(`new project name is ${newProjectItem}`);
-
-//   //add the new project to the html
-//   let projectList = document.querySelector(".project-list");
-//   const btn = document.createElement("button");
-//   btn.classList.add("indv-project");
-//   btn.innerHTML = Project.pName;
-//   projectList.appendChild(btn);
-//   //add filter capabilities to button
-//   btn.addEventListener("click", function () {
-//     filterByProjects(Project.pName);
-//   });
-
-//   //add project options to the form
-//   let formOption = document.getElementById("project");
-//   const option = document.createElement("option");
-//   option.text = Project.pName;
-//   formOption.add(option);
-
-//   //add new project to the array
-//   addNewProject();
-
-//   //show project list in console
-//   console.log(myProjects);
-// };
-
-//filter tasks due today
 
 const filterDueToday = () => {
   console.log("tasks due today");
-  console.log(myTasks);
 
   const result = myTasks.filter(checkDate);
 
@@ -81,8 +39,6 @@ const filterDueToday = () => {
     dueNamePara.textContent = Task.due;
     singleTask.appendChild(dueNamePara);
 
-    console.log(Task.due);
-
     //notes div
     let notesNamePara = document.createElement("p");
     notesNamePara.className = "task-notes";
@@ -107,7 +63,6 @@ const filterDueToday = () => {
     taskCompleteButton.appendChild(taskCompleteIcon);
     bottomTaskLine.appendChild(taskCompleteButton);
 
-    console.log(`Task name is:${Task.taskName}`);
     i++;
 
     return singleTask;

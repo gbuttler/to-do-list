@@ -58,7 +58,6 @@ const filterByProjects = (projName) => {
   let filteredTasks = myTasks.filter((Task) => {
     return Task.project === projName;
   });
-  console.log(filteredTasks);
 
   let i = 0;
   taskScreen.innerHTML = "";
@@ -87,8 +86,6 @@ const filterByProjects = (projName) => {
     dueNamePara.className = "task-due";
     dueNamePara.textContent = Task.due;
     singleTask.appendChild(dueNamePara);
-
-    console.log(Task.due);
 
     //notes div
     let notesNamePara = document.createElement("p");
