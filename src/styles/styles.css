@@ -50,6 +50,17 @@ header {
   justify-content: center;
 }
 
+.project-form-div {
+  position: fixed;
+  left: 0%;
+  top: 10%;
+  z-index: -2;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .task-form {
   width: fit-content;
   padding: 10%;

@@ -1,37 +1,43 @@
-import { myProjects } from "./projects";
+import { myProjects, Project, filterByProjects } from "./projects";
 import { myTasks, Task, currentDate, taskScreen } from "./task";
 
 //new project button
-const newProject = () => {
-  console.log("creating a new project");
+// const newProject = () => {
+//   console.log("creating a new project");
 
-  //using prompt to create a new project
-  let newProjectItem = prompt("Please enter your project name", "New Project");
+//   //using prompt to create a new project
+//   let newProjectItem = prompt("Please enter your project name", "New Project");
 
-  //add projects to project array
-  function addNewProject() {
-    myProjects.push(newProjectItem);
-  }
+//   //add projects to project array
+//   function addNewProject() {
+//     myProjects.push(newProjectItem);
+//   }
 
-  //add the new project to the html
-  let projectList = document.querySelector(".project-list");
-  const para = document.createElement("p");
-  para.classList.add("indv-project");
-  para.innerHTML = newProjectItem;
-  projectList.appendChild(para);
+//   console.log(`new project name is ${newProjectItem}`);
 
-  //add project options to the form
-  let formOption = document.getElementById("project");
-  const option = document.createElement("option");
-  option.text = newProjectItem;
-  formOption.add(option);
+//   //add the new project to the html
+//   let projectList = document.querySelector(".project-list");
+//   const btn = document.createElement("button");
+//   btn.classList.add("indv-project");
+//   btn.innerHTML = Project.pName;
+//   projectList.appendChild(btn);
+//   //add filter capabilities to button
+//   btn.addEventListener("click", function () {
+//     filterByProjects(Project.pName);
+//   });
 
-  //add new project to the array
-  addNewProject();
+//   //add project options to the form
+//   let formOption = document.getElementById("project");
+//   const option = document.createElement("option");
+//   option.text = Project.pName;
+//   formOption.add(option);
 
-  //show project list in console
-  console.log(myProjects);
-};
+//   //add new project to the array
+//   addNewProject();
+
+//   //show project list in console
+//   console.log(myProjects);
+// };
 
 //filter tasks due today
 
@@ -110,4 +116,4 @@ const filterDueToday = () => {
   console.log(result);
 };
 
-export { newProject, filterDueToday };
+export { filterDueToday };

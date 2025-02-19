@@ -41,6 +41,8 @@ addNewTask(
   "don't forget to change the towels"
 );
 
+addNewTask("Clear email inbox", "Work", currentDate, "");
+
 //display books in the content div
 
 function displayTasks() {

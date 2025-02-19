@@ -1,3 +1,5 @@
+import { myTasks } from "./task";
+
 //array to hold projects
 const myProjects = [];
 
@@ -16,10 +18,14 @@ function addNewProject(pName) {
 addNewProject("Personal");
 addNewProject("Work");
 
+let projectList = document.querySelector(".project-list");
+
 //function to load projects
 const loadProjects = () => {
   console.log("projects are loading");
   console.log(myProjects);
+
+  projectList.innerHTML = "";
 
   myProjects.forEach((Project, j) => {
     //add the new project to the html
@@ -28,6 +34,10 @@ const loadProjects = () => {
     btn.classList.add("indv-project");
     btn.innerHTML = Project.pName;
     projectList.appendChild(btn);
+    //add filter capabilities to button
+    btn.addEventListener("click", function () {
+      filterByProjects(Project.pName);
+    });
 
     //add project options to the form
     let formOption = document.getElementById("project");
@@ -38,10 +48,20 @@ const loadProjects = () => {
 };
 
 //function to allow you to filter by project
-const filterByProjects = () => {};
+const filterByProjects = (projName) => {
+  console.log("filtering....");
+  //get innerHTML of button click
+  // let projName = document.querySelector(".indv-project").innerHTML;
+  console.log(projName);
+
+  let filteredTasks = myTasks.filter((Task) => {
+    return Task.project === projName;
+  });
+  console.log(filteredTasks);
+};
 //get project name
 //compare inner HTML to Task.project
 //create a new array with those filtered tasks
 //display the new array of tasks
 
-export { myProjects, loadProjects, Project, filterByProjects };
+export { myProjects, loadProjects, Project, filterByProjects, addNewProject };

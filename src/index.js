@@ -1,13 +1,14 @@
 import "./styles/styles.css";
 import { loadTasks } from "./task";
 import { taskFormFunc, cancelTaskForm } from "./new-task-form";
-import { newProject, filterDueToday } from "./sidebar";
+import { filterDueToday } from "./sidebar";
 import {
   loadProjects,
   filterByProjects,
   myProjects,
   Project,
 } from "./projects";
+import { projectFormFunc } from "./new-project-form";
 
 loadTasks();
 loadProjects();
@@ -18,14 +19,13 @@ const newProjectBtn = document.querySelector(".new-project-btn");
 const cancelTaskButton = document.querySelector(".form-cancel-button");
 const dueTodayButton = document.querySelector(".due-today-button");
 const allTasksButton = document.querySelector(".all-tasks-button");
-const indivProjectBtn = document.querySelector(".indv-project");
 
 newTaskBtn.addEventListener("click", function () {
   taskFormFunc();
 });
 
 newProjectBtn.addEventListener("click", function () {
-  newProject();
+  projectFormFunc();
 });
 
 cancelTaskButton.addEventListener("click", function (event) {
@@ -39,10 +39,4 @@ dueTodayButton.addEventListener("click", function () {
 
 allTasksButton.addEventListener("click", function () {
   loadTasks();
-});
-
-indivProjectBtn.addEventListener("click", function () {
-  myProjects.forEach((Project, j) => {
-    console.log("filtering projects");
-  });
 });
