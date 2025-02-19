@@ -19,6 +19,7 @@ addNewProject("Personal");
 addNewProject("Work");
 
 let projectList = document.querySelector(".project-list");
+let formOption = document.getElementById("project");
 
 //function to load projects
 const loadProjects = () => {
@@ -26,6 +27,7 @@ const loadProjects = () => {
   console.log(myProjects);
 
   projectList.innerHTML = "";
+  formOption.innerHTML = "";
 
   myProjects.forEach((Project, j) => {
     //add the new project to the html
@@ -40,7 +42,7 @@ const loadProjects = () => {
     });
 
     //add project options to the form
-    let formOption = document.getElementById("project");
+
     const option = document.createElement("option");
     option.text = Project.pName;
     formOption.add(option);
@@ -50,8 +52,7 @@ const loadProjects = () => {
 //function to allow you to filter by project
 const filterByProjects = (projName) => {
   console.log("filtering....");
-  //get innerHTML of button click
-  // let projName = document.querySelector(".indv-project").innerHTML;
+
   console.log(projName);
 
   let filteredTasks = myTasks.filter((Task) => {
@@ -59,9 +60,5 @@ const filterByProjects = (projName) => {
   });
   console.log(filteredTasks);
 };
-//get project name
-//compare inner HTML to Task.project
-//create a new array with those filtered tasks
-//display the new array of tasks
 
 export { myProjects, loadProjects, Project, filterByProjects, addNewProject };
