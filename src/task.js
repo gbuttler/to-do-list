@@ -32,10 +32,10 @@ let currentDate = `${year}-${month}-${day}`;
 console.log(currentDate);
 
 //dummy tasks
-addNewTask("hang up laundry", "Personal", currentDate, "");
+addNewTask("Hang up the laundry", "Personal", currentDate, "");
 
 addNewTask(
-  "clean the bathroom",
+  "Clean the bathroom",
   "Personal",
   currentDate,
   "don't forget to change the towels"

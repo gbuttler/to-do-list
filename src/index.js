@@ -11,7 +11,7 @@ import {
 } from "./projects";
 import {
   projectFormFunc,
-  cancelProjectFor,
+  cancelProjectForm,
   projectForm,
 } from "./new-project-form";
 

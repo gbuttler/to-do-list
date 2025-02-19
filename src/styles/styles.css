@@ -1,6 +1,12 @@
 * {
-  color: purple;
-  background-color: white;
+  color: var(--dark-purple);
+  background-color: transparent;
+  --pink: #ebd5d5;
+  --dark-purple: #2e232f;
+  --green: #c8d5c3;
+  --blue: #bfd8d9;
+  --yellow: #f3ebcd;
+  font-family: Georgia, serif;
 }
 
 html {
@@ -21,16 +27,46 @@ body {
 
 header {
   position: sticky;
-
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
-  background-color: white;
+  /* border: 1px solid black; */
+  background-color: var(--green);
+  box-shadow: 1px 1px 5px var(--dark-purple);
+  z-index: 2;
+}
+
+button {
+  padding: 7px;
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 15px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+header h1 {
+  padding-left: 15px;
+  background-color: transparent;
+  font-size: 50px;
 }
 
 .header-buttons {
+  background-color: transparent;
+  display: flex;
+  padding-right: 30px;
+}
+
+.header-buttons button {
+  margin-left: 10px;
+}
+
+.header-buttons button:hover {
+  background-color: #719064;
 }
 
 .new-task-btn {
@@ -42,7 +78,7 @@ header {
 .task-form-div {
   position: fixed;
   left: 0%;
-  top: 10%;
+  top: 11%;
   z-index: -1;
   background-color: transparent;
   width: 100%;
@@ -50,10 +86,62 @@ header {
   justify-content: center;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 5%;
+  background-color: var(--pink);
+  border: 1px solid #bd7575;
+
+  border-radius: 5px;
+}
+
+.task-form-options {
+  background-color: transparent;
+  padding-bottom: 3px;
+}
+
+input {
+  background-color: white;
+  border: 1px solid var(--dark-purple);
+  border-radius: 3px;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+select {
+  background-color: white;
+  border: 1px solid var(--dark-purple);
+  border-radius: 3px;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+.form-indv-options {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: transparent;
+}
+
+.project-indv-options {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: transparent;
+}
+
 .project-form-div {
   position: fixed;
   left: 0%;
-  top: 10%;
+  top: 11%;
   z-index: -2;
   background-color: transparent;
   width: 100%;
@@ -61,16 +149,66 @@ header {
   justify-content: center;
 }
 
-.task-form {
+.project-form {
   width: fit-content;
-  padding: 10%;
-  border: 1px black solid;
+  background-color: var(--pink);
+}
+
+#submit-button {
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 15px;
+  align-items: center;
+  padding: 7px;
+}
+
+#submit-button:hover {
+  background-color: #bd7575;
+  cursor: pointer;
+}
+
+.form-submit-button {
+  align-self: center;
+}
+
+.form-cancel-button {
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 15px;
+  width: fit-content;
+  align-self: center;
+}
+
+.form-cancel-button:hover {
+  background-color: #bd7575;
+  cursor: pointer;
+}
+
+.project-form-cancel-button {
+  border: none;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 15px;
+  width: fit-content;
+  align-self: center;
+}
+
+.project-form-submit-button {
+  align-self: center;
+}
+
+.project-form-cancel-button:hover {
+  background-color: #bd7575;
+  cursor: pointer;
 }
 
 .center-page {
   display: grid;
   grid-template-columns: 15% 85%;
   top: 10vh;
+  background-color: white;
   /* bottom: 30%; */
 }
 
@@ -81,14 +219,37 @@ header {
   overflow: auto;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  width: 15vw;
+  /* border: 1px solid black; */
+  width: fit-content;
+  background-color: var(--blue);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  align-content: center;
+}
+
+.sidebar button:hover {
+  background-color: #548a8c;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: bolder;
+  background-color: transparent;
+  align-self: center;
+  margin-top: 40px;
 }
 
 .sidebar button {
+  width: fit-content;
+  align-self: center;
 }
 
 .project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
 }
 
 .sidebar button {
@@ -103,16 +264,53 @@ header {
   margin-left: 110%;
   margin-top: 10px;
   width: 80vw;
-
   height: 100%;
   padding-bottom: 70px;
 }
 
 .singleTask {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 5px;
-  min-height: 259px;
+  padding-left: 15px;
+  min-height: 200px;
   max-height: fit-content;
-  border: 1px solid black;
+  background-color: var(--yellow);
+  box-shadow: 1px 1px 3px var(--dark-purple);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+.singleTask:hover {
+  background-color: #f7f2de;
+}
+
+.singleTask p {
+  background-color: transparent;
+  margin: 1px;
+}
+
+.task-name {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.singleTask div {
+  background-color: transparent;
+}
+
+.singleTask i {
+  background-color: transparent;
+  color: #bd7575;
+}
+
+.singleTask i:hover {
+  color: #719064;
+  cursor: pointer;
 }
 
 footer {
@@ -121,13 +319,35 @@ footer {
   left: 0;
   /* right: 0; */
   width: 100%;
-  background-color: white;
   margin-right: var(--scrollbar-width, 0px);
+  box-shadow: 0.5px -0.5px 5px var(--dark-purple);
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  background-color: var(--green);
+  padding-left: 15px;
+  padding-right: 15px;
+  color: var(--green);
+}
+
+.footer-quote {
+  margin-left: 20px;
+  font-size: 12px;
+  background-color: transparent;
+  color: var(--green);
+  padding-right: 20px;
+  font-style: italic;
+}
+
+.footer-content:hover .footer-quote {
+  color: var(--dark-purple);
+}
+
+.footer-author {
+  font-size: 10px;
+  background-color: transparent;
 }
