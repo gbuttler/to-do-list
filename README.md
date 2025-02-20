@@ -2,18 +2,14 @@
 
 ### Aims
 
+- Create a to-do list that allows you to add tasks and projects, filter by projects and filter by due date.
+- Allow tasks and projects to be added to local storage
+
 ### Future Ideas
 
-### Steps
-
-- set up webpack
-- create basic HTML for layout
-- set up js files: task, project, header, footer, sidebar
-- create task object
-- function to add task (and add info)
-- function to delete task
-- function to create project
-- function to view all tasks in a project
-- task display function (date order)
-- task color function, based on due date
-- add a web storage api - so the to-dos aren't deleted
+- Allow the user to delete projects.
+- Allow the user to edit tasks.
+- Have a completed projects list.
+- If doing this again, I would implement local storage from the start, rather than as an add on at the end.
+- Tidy up the JS and make it a little easier to understand.
+- Add some animations to make the tasks move slightly when you hover over them.
