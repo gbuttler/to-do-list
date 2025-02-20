@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do</title>
+    <script
+      src="https://kit.fontawesome.com/5798858965.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  <script defer src="main.js"></script></head>
+  <body>
+    <header>
+      <h1>To-Do</h1>
+      <div class="header-buttons">
+        <button class="new-task-btn">New task</button>
+        <button class="new-project-btn">New project</button>
+      </div>
+    </header>
+    <div class="task-form-div">
+      <form id="new-task-form" class="task-form" action method="GET">
+        <div class="task-form-options">
+          <div class="form-indv-options">
+            <label for="taskName">Task name</label>
+            <input
+              type="text"
+              id="taskName"
+              name="taskName"
+              placeholder="Task name here..."
+              required
+            />
+          </div>
+          <div class="form-indv-options">
+            <label for="project">Project</label>
+            <select id="project" name="project" placeholder="Project here...">
+              <option value="No Project">No-project</option>
+            </select>
+          </div>
+          <div class="form-indv-options">
+            <label for="due">Project</label>
+            <input type="date" id="due" name="due" />
+          </div>
+          <div class="form-indv-options">
+            <label for="notes">Notes</label>
+            <input
+              type="text"
+              id="notes"
+              name="notes"
+              placeholder="Notes here..."
+            />
+          </div>
+        </div>
+        <div class="form-submit-button">
+          <input id="submit-button" type="submit" />
+        </div>
+        <div class="form-cancel-button">
+          <button>Cancel</button>
+        </div>
+      </form>
+    </div>
+    <div class="project-form-div">
+      <form id="new-project-form" class="project-form" action method="GET">
+        <div class="project-form-options">
+          <div class="project-indv-options">
+            <label for="pName">Project name</label>
+            <input
+              type="text"
+              id="pName"
+              name="pName"
+              placeholder="Project name here..."
+              required
+            />
+          </div>
+        </div>
+        <div class="project-form-submit-button">
+          <input id="submit-button" type="submit" />
+        </div>
+        <div class="project-form-cancel-button">
+          <button>Cancel</button>
+        </div>
+      </form>
+    </div>
+    <div class="center-page">
+      <div class="sidebar">
+        <button class="due-today-button">Due today</button>
+        <button class="all-tasks-button">All tasks</button>
+        <h3>Projects</h3>
+        <div class="project-list"></div>
+      </div>
+      <div class="content"></div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <p class="footer-quote">'Make it so' - Captain Jean Luc Picard</p>
+        <p class="footer-author">Created by G.Sheehy 2025</p>
+      </div>
+    </footer>
+  </body>
+</html>
