@@ -18,6 +18,7 @@ html {
 body {
   margin: 0px;
   min-height: 100dvh;
+  height: 100vh;
   width: 100%;
   display: grid;
   grid-template-rows: 10vh 80vh 10vh;
@@ -77,6 +78,7 @@ header h1 {
   width: 100%;
   display: flex;
   justify-content: center;
+  visibility: hidden;
 }
 
 form {
@@ -139,6 +141,7 @@ select:hover {
   width: 100%;
   display: flex;
   justify-content: center;
+  visibility: hidden;
 }
 
 .project-form {

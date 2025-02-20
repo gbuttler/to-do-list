@@ -72,6 +72,7 @@ document
     );
 
     taskForm.style.zIndex = "-5";
+    taskForm.style.visibility = "hidden";
 
     document.getElementById("new-task-form").reset();
 
@@ -94,6 +95,7 @@ document
     addNewProject(Project.pName);
 
     projectForm.style.zIndex = "-6";
+    projectForm.style.visibility = "hidden";
 
     document.getElementById("new-project-form").reset();
 
