@@ -1,5 +1,6 @@
 //array to hold the tasks
-const myTasks = [];
+let tasks = localStorage.getItem("tasks");
+const myTasks = tasks ? JSON.parse(tasks) : [];
 
 // task object
 function Task(taskName, project, due, notes) {
@@ -14,12 +15,13 @@ function addNewTask(taskName, project, due, notes) {
   const newTask = new Task(taskName, project, due, notes);
 
   myTasks.push(newTask);
+  localStorage.setItem("tasks", JSON.stringify(myTasks));
 }
 
 //access the content div
 const taskScreen = document.querySelector(".content");
 
-//create current date constant for dummy tasks
+//create current date constant
 const date = new Date();
 
 let day = date.getDate();
@@ -28,17 +30,22 @@ let year = date.getFullYear();
 
 let currentDate = `${year}-${month}-${day}`;
 
-//dummy tasks
-addNewTask("Hang up the laundry", "Personal", currentDate, "");
+const initialTaskLoad = () => {
+  console.log(myTasks, myTasks == []);
+  if (myTasks.length === 0) {
+    //dummy tasks
+    addNewTask("Hang up the laundry", "Personal", currentDate, "");
 
-addNewTask(
-  "Clean the bathroom",
-  "Personal",
-  currentDate,
-  "don't forget to change the towels"
-);
+    addNewTask(
+      "Clean the bathroom",
+      "Personal",
+      currentDate,
+      "don't forget to change the towels"
+    );
 
-addNewTask("Clear email inbox", "Work", currentDate, "");
+    addNewTask("Clear email inbox", "Work", currentDate, "");
+  }
+};
 
 //display books in the content div
 
@@ -88,6 +95,7 @@ function displayTasks() {
     taskCompleteButton.addEventListener("click", () => {
       console.log("task completed", j);
       myTasks.splice(j, 1);
+      localStorage.setItem("tasks", JSON.stringify(myTasks));
       displayTasks();
     });
     let taskCompleteIcon = document.createElement("i");
@@ -118,4 +126,5 @@ export {
   completeTask,
   currentDate,
   taskScreen,
+  initialTaskLoad,
 };

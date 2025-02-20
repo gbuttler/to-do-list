@@ -1,7 +1,8 @@
 import { myTasks, taskScreen } from "./task";
 
 //array to hold projects
-const myProjects = [];
+let projects = localStorage.getItem("projects");
+const myProjects = projects ? JSON.parse(projects) : [];
 
 function Project(pName) {
   this.pName = pName;
@@ -12,11 +13,16 @@ function addNewProject(pName) {
   const newProject = new Project(pName);
 
   myProjects.push(newProject);
+  localStorage.setItem("projects", JSON.stringify(myProjects));
 }
 
 //default projects
-addNewProject("Personal");
-addNewProject("Work");
+const initialProjectLoad = () => {
+  if (myProjects.length === 0) {
+    addNewProject("Personal");
+    addNewProject("Work");
+  }
+};
 
 let projectList = document.querySelector(".project-list");
 let formOption = document.getElementById("project");
@@ -118,4 +124,11 @@ const filterByProjects = (projName) => {
   });
 };
 
-export { myProjects, loadProjects, Project, filterByProjects, addNewProject };
+export {
+  myProjects,
+  loadProjects,
+  Project,
+  filterByProjects,
+  addNewProject,
+  initialProjectLoad,
+};

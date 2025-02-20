@@ -1,14 +1,29 @@
 import "./styles/styles.css";
-import { loadTasks, Task, addNewTask, myTasks, displayTasks } from "./task";
+import {
+  loadTasks,
+  Task,
+  addNewTask,
+  myTasks,
+  displayTasks,
+  initialTaskLoad,
+} from "./task";
 import { taskFormFunc, cancelTaskForm, taskForm } from "./new-task-form";
 import { filterDueToday } from "./sidebar";
-import { loadProjects, myProjects, Project, addNewProject } from "./projects";
+import {
+  loadProjects,
+  myProjects,
+  Project,
+  addNewProject,
+  initialProjectLoad,
+} from "./projects";
 import {
   projectFormFunc,
   cancelProjectForm,
   projectForm,
 } from "./new-project-form";
 
+initialTaskLoad();
+initialProjectLoad();
 loadTasks();
 loadProjects();
 

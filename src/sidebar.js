@@ -1,4 +1,4 @@
-import { myTasks, Task, currentDate, taskScreen } from "./task";
+import { myTasks, Task, currentDate, taskScreen, displayTasks } from "./task";
 
 const filterDueToday = () => {
   console.log("tasks due today");
